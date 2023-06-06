@@ -28,9 +28,12 @@ import {
 
 function App(): JSX.Element {
   return (
-    <View>
-      <Text>Hello, world!</Text>
-    </View>
+    <View style={{ 
+        backgroundColor: 'red',
+        height: 100,
+        width: 100,
+        }}>
+      </View>
   );
 }
 
