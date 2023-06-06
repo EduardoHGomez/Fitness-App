@@ -28,12 +28,10 @@ import {
 
 function App(): JSX.Element {
   return (
-    <View style={{ 
-        backgroundColor: 'red',
-        height: 100,
-        width: 100,
-        }}>
-      </View>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View style={{ width: 100, height: 100, backgroundColor: 'red' }} />
+    <View style={{ width: 100, height: 100, backgroundColor: 'blue' }} />
+  </View>
   );
 }
 
