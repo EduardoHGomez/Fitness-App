@@ -28,9 +28,8 @@ import {
 
 function App(): JSX.Element {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    <View style={{ width: 100, height: 100, backgroundColor: 'red' }} />
-    <View style={{ width: 100, height: 100, backgroundColor: 'blue' }} />
+    <View style={{ flex: 1, justifyContent: 'center' }}>
+    <Text style={{ fontSize: 16 }}>The <Text style={{ fontWeight: 'bold' }}>quick brown fox</Text> jumps over the lazy dog</Text>
   </View>
   );
 }
