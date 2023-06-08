@@ -37,9 +37,11 @@ function App(): JSX.Element {
     </Text>
     <View style={{ height: 400, backgroundColor: '#e5e5e5' }}>
       {/* This is our scrollable area */}
-      <View style={{ width: 300, height: 300, backgroundColor: 'red' }} />
-      <View style={{ width: 300, height: 300, backgroundColor: 'green' }} />
-      <View style={{ width: 300, height: 300, backgroundColor: 'blue' }} />
+      <ScrollView>
+        <View style={{ width: 300, height: 300, backgroundColor: 'red' }} />
+        <View style={{ width: 300, height: 300, backgroundColor: 'green' }} />
+        <View style={{ width: 300, height: 300, backgroundColor: 'blue' }} />
+      </ScrollView>
     </View>
   </View>
   );
