@@ -32,10 +32,15 @@ const image = require('./react-native.jpg');
 function App(): JSX.Element {
   return (
     <View style={{ flex: 1, justifyContent: 'center' }}>
-    <Image
-      source={image}
-      style={{ width: 100, height: 100 }}
-    />
+    <Text style={{ fontSize: 24, textAlign: 'center' }}>
+      Scroll me!
+    </Text>
+    <View style={{ height: 400, backgroundColor: '#e5e5e5' }}>
+      {/* This is our scrollable area */}
+      <View style={{ width: 300, height: 300, backgroundColor: 'red' }} />
+      <View style={{ width: 300, height: 300, backgroundColor: 'green' }} />
+      <View style={{ width: 300, height: 300, backgroundColor: 'blue' }} />
+    </View>
   </View>
   );
 }
