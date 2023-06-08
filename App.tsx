@@ -36,8 +36,7 @@ function App(): JSX.Element {
       Scroll me!
     </Text>
     <View style={{ height: 400, backgroundColor: '#e5e5e5' }}>
-      {/* This is our scrollable area */}
-      <ScrollView>
+      <ScrollView horizontal = {true}>
         <View style={{ width: 300, height: 300, backgroundColor: 'red' }} />
         <View style={{ width: 300, height: 300, backgroundColor: 'green' }} />
         <View style={{ width: 300, height: 300, backgroundColor: 'blue' }} />
