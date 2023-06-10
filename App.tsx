@@ -42,7 +42,9 @@ function App(): JSX.Element {
       </Text>
       <Button
         title='Press me'
-        onPress={() => null}
+        onPress={() => 
+            this.setState({count: this.state.count + 1})
+            }
       />
     </View>
   );
