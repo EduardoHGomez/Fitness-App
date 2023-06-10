@@ -6,11 +6,12 @@
  * @format
  */
 
-import React from 'react';
-import type {PropsWithChildren} from 'react';
+import React, { useState } from 'react';
+import type {PropsWithChildren}from 'react';
 import {
   SafeAreaView,
   ScrollView,
+  Button,
   StatusBar,
   StyleSheet,
   Image,
@@ -30,19 +31,20 @@ import {
 const image = require('./react-native.jpg');
 
 function App(): JSX.Element {
+    const [pressedCount, setPressedCount] = useState(0);
   return (
     <View style={{ flex: 1, justifyContent: 'center' }}>
-    <Text style={{ fontSize: 24, textAlign: 'center' }}>
-      Scroll me!
-    </Text>
-    <View style={{ height: 400, backgroundColor: '#e5e5e5' }}>
-      <ScrollView horizontal = {true}>
-        <View style={{ width: 300, height: 300, backgroundColor: 'red' }} />
-        <View style={{ width: 300, height: 300, backgroundColor: 'green' }} />
-        <View style={{ width: 300, height: 300, backgroundColor: 'blue' }} />
-      </ScrollView>
+      <Text style={{ margin: 16 }}>
+        {pressedCount > 0
+          ? `The button was pressed ${pressedCount} times!`
+          : 'The button isn\'t pressed yet'
+        }
+      </Text>
+      <Button
+        title='Press me'
+        onPress={() => null}
+      />
     </View>
-  </View>
   );
 }
 
