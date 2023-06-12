@@ -47,6 +47,13 @@ function App(): JSX.Element {
             }
       />
     </View>
+    <View>
+        <ScrollView style={styles.scrollView}>
+        <Text style={styles.text}>
+          Example
+        </Text>
+      </ScrollView>
+    </View>
   );
 }
 
