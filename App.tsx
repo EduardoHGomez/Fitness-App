@@ -49,6 +49,8 @@ function App(): JSX.Element {
     </View>
     <View>
         <ScrollView style={styles.scrollView}>
+            Item test 1
+            
         <Text style={styles.text}>
           Example
         </Text>
