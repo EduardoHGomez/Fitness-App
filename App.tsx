@@ -41,7 +41,6 @@ function App(): JSX.Element {
   const handleCountdown2 = () => {
     setCountdown2(countdown2 - 1);
   };
-
   return (
     <View style={styles.container}>
       <View style={styles.countdownContainer}>
@@ -53,6 +52,7 @@ function App(): JSX.Element {
       <View style={styles.grayBox}></View>
     </View>
   );
+  
 }
 
 const styles = StyleSheet.create({
