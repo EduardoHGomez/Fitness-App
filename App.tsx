@@ -31,32 +31,44 @@ import {
 const image = require('./react-native.jpg');
 
 function App(): JSX.Element {
-    const [pressedCount, setPressedCount] = useState(0);
+    const [countdown1, setCountdown1] = useState(10);
+  const [countdown2, setCountdown2] = useState(20);
+
+  const handleCountdown1 = () => {
+    setCountdown1(countdown1 - 1);
+  };
+
+  const handleCountdown2 = () => {
+    setCountdown2(countdown2 - 1);
+  };
+
   return (
-    <View style={{ flex: 1, justifyContent: 'center' }}>
-      <Text style={{ margin: 16 }}>
-        {pressedCount > 0
-          ? `The button was pressed ${pressedCount} times!`
-          : 'The button isn\'t pressed yet'
-        }
-      </Text>
-      <Button
-        title='Press me'
-        onPress={() => 
-            setState({count: state.count + 1})
-            }
-      />
-    </View>
-    <View>
-        <ScrollView style={styles.scrollView}>
-            Item test 1
-            
-        <Text style={styles.text}>
-          Example
-        </Text>
-      </ScrollView>
+    <View style={styles.container}>
+      <View style={styles.countdownContainer}>
+        <Button title={`Countdown 1: ${countdown1}`} onPress={handleCountdown1} />
+      </View>
+      <View style={styles.countdownContainer}>
+        <Button title={`Countdown 2: ${countdown2}`} onPress={handleCountdown2} />
+      </View>
+      <View style={styles.grayBox}></View>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    countdownContainer: {
+      marginVertical: 10,
+    },
+    grayBox: {
+      width: 200,
+      height: 200,
+      backgroundColor: 'gray',
+    },
+});
 
 export default App;
