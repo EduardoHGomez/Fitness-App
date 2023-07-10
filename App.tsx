@@ -106,7 +106,7 @@ const HomeScreen = ({ navigation }) => {
     );
   };
 
-const styles = StyleSheet.create({
+  const styles = StyleSheet.create({
     container: {
       flex: 1,
       justifyContent: 'center',
@@ -120,6 +120,14 @@ const styles = StyleSheet.create({
       height: 200,
       backgroundColor: 'gray',
     },
-});
+    input: {
+      height: 40,
+      width: 200,
+      borderColor: 'gray',
+      borderWidth: 1,
+      marginBottom: 10,
+      padding: 10,
+    },
+  });
 
 export default App;
