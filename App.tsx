@@ -55,6 +55,36 @@ function App(): JSX.Element {
   
 }
 
+const HomeScreen = ({ navigation }) => {
+    const [countdown1, setCountdown1] = useState(10);
+    const [countdown2, setCountdown2] = useState(20);
+  
+    const handleCountdown1 = () => {
+      setCountdown1(countdown1 - 1);
+    };
+  
+    const handleCountdown2 = () => {
+      setCountdown2(countdown2 - 1);
+    };
+  
+    const handleNavigate = () => {
+      navigation.navigate('WorkoutInput');
+    };
+  
+    return (
+      <View style={styles.container}>
+        <View style={styles.countdownContainer}>
+          <Button title={`Countdown 1: ${countdown1}`} onPress={handleCountdown1} />
+        </View>
+        <View style={styles.countdownContainer}>
+          <Button title={`Countdown 2: ${countdown2}`} onPress={handleCountdown2} />
+        </View>
+        <View style={styles.grayBox}></View>
+        <Button title="Enter Workout" onPress={handleNavigate} />
+      </View>
+    );
+  };
+
 const styles = StyleSheet.create({
     container: {
       flex: 1,
