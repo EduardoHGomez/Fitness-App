@@ -85,6 +85,27 @@ const HomeScreen = ({ navigation }) => {
     );
   };
 
+  const WorkoutInputScreen = () => {
+    const [workoutName, setWorkoutName] = useState('');
+  
+    const handleSaveWorkout = () => {
+      // Implement your save workout logic here
+      console.log(`Workout name: ${workoutName}`);
+    };
+  
+    return (
+      <View style={styles.container}>
+        <TextInput
+          style={styles.input}
+          onChangeText={setWorkoutName}
+          value={workoutName}
+          placeholder="Enter workout name"
+        />
+        <Button title="Save Workout" onPress={handleSaveWorkout} />
+      </View>
+    );
+  };
+
 const styles = StyleSheet.create({
     container: {
       flex: 1,
