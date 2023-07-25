@@ -116,7 +116,7 @@ const HomeScreen = ({ navigation }) => {
       marginVertical: 10,
     },
     grayBox: {
-      width: 200,
+      width: 150,
       height: 200,
       backgroundColor: 'gray',
     },
